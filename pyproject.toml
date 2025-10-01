@@ -3,11 +3,13 @@ name = "encrypted-voice-forum"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "tallywiesenberg",email = "t.j.wies@gmail.com"}
+    {name = "tallywiesenberg",email = "t.j.wies@gmail.com"},
+    {name = "rebeccadukewiesenberg", email = "rdukewiesenb@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "ipfshttpclient (>=0.7.0,<0.8.0)"
 ]
 
 [tool.poetry]
