@@ -33,4 +33,26 @@ const serialisedMessage = DataPacket.encode(protoMessage).finish();
   // await node.stop();  // uncomment if you want to stop
 }
 
+// Send the message, and get the id to track events
+const messageId = reliableChannel.send(payload);
+        
+reliableChannel.addEventListener("sending-message-irrecoverable-error", (event) => {
+    if (messageId === event.detail.messageId) {
+      console.error('Failed to send message:', event.detail.error);
+      // Show an error to the user
+    }
+})
+
+reliableChannel.addEventListener("message-sent", (event) => {
+    if (messageId === event.detail) {
+        // Message sent, show '✔' to the user, etc
+    }
+})
+
+reliableChannel.addEventListener("message-acknowledged", (event) => {
+  if (messageId === event.detail) {
+    // Message acknowledged by other participants, show '✔✔' to the user, etc
+  }
+})
+
 main().catch(console.error);
