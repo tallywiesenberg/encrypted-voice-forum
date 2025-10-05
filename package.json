@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@waku/sdk": "^0.0.35",
+    "event-target-shim": "^6.0.2",
+    "isomorphic-ws": "^5.0.0",
+    "protobufjs": "^7.5.4"
+  },
+  "name": "encrypted-voice-forum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
