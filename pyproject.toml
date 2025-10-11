@@ -1,5 +1,5 @@
 [project]
-name = "encrypted-voice-forum"
+name = "open-luce"
 version = "0.1.0"
 description = ""
 authors = [
@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "encrypted_voice_forum", from = "src"}]
+packages = [{include = "open_luce", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -37,3 +37,6 @@ build-backend = "poetry.core.masonry.api"
 dev = [
     "pytest (>=8.4.2,<9.0.0)"
 ]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
